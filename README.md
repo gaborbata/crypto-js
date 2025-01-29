@@ -1,4 +1,4 @@
-# crypto-js
+# crypto-js 3.1.9-1
 
 JavaScript library of crypto standards.
 
@@ -31,65 +31,15 @@ var CryptoJS = require("crypto-js");
 console.log(CryptoJS.HmacSHA1("Message", "Key"));
 ```
 
-## Client (browser)
-
-Requirements:
-
-- Node.js
-- Bower (package manager for frontend)
-
-```bash
-bower install crypto-js
-```
-
-### Usage
-
-Modular include:
-
-```javascript
-require.config({
-    packages: [
-        {
-            name: 'crypto-js',
-            location: 'path-to/bower_components/crypto-js',
-            main: 'index'
-        }
-    ]
-});
-
-require(["crypto-js/aes", "crypto-js/sha256"], function (AES, SHA256) {
-    console.log(SHA256("Message"));
-});
-```
-
-Including all libraries, for access to extra methods:
-
-```javascript
-// Above-mentioned will work or use this simple form
-require.config({
-    paths: {
-        'crypto-js': 'path-to/bower_components/crypto-js/crypto-js'
-    }
-});
-
-require(["crypto-js"], function (CryptoJS) {
-    console.log(CryptoJS.HmacSHA1("Message", "Key"));
-});
-```
-
 ### Usage without RequireJS
 
 ```html
-<script type="text/javascript" src="path-to/bower_components/crypto-js/crypto-js.js"></script>
+<script type="text/javascript" src="path-to/crypto-js/crypto-js.js"></script>
 <script type="text/javascript">
     var encrypted = CryptoJS.AES(...);
     var encrypted = CryptoJS.SHA256(...);
 </script>
 ```
-
-## API
-
-See: https://code.google.com/p/crypto-js
 
 ### AES Encryption
 
